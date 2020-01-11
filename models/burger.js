@@ -9,7 +9,7 @@ all: function(cb) {
 
 create: function(cols, vals, cb) {
     orm.create("burgers", cols, vals, function(res) {
-        cb (res)
+        cb(res)
     });
 },
 update: function(objColVals, condition, cb) {
