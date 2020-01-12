@@ -5,11 +5,40 @@ var connection = require('../config/connection')
 // insertOne()
 // updateOne()
 
+function questionToArr(num) {
+    var array = [];
+
+    for (var i = 0; i < num; i++) {
+        array.push("?");
+    }
+
+    return array.toString();
+}
+
+function objSql(ob) {
+ var array = [];
+ for (var key in ob) {
+     var value = ob[key];
+     if (Object.hasOwnProperty.call(ob, key)) {
+         console.log((Object.hasOwnProperty.call(ob, key)))
+         if (typeof value === "string" && value.indexOf(" ") >= 0) {
+             value = "'" + value + "'";
+         }
+         array.push(key + "=" + value);
+     }
+ }
+ return array.toString();
+}
 
 var orm = {
-selectAll: function(tableInput, cb) {
-    var selectAllQuery = "SELECT * FROM " + tableInput + ";";
+selectAll: function(Input, cb) {
+    console.log("your in the orm ======")
+    
+    var selectAllQuery = "SELECT * FROM " + Input + ";";
+    console.log(selectAllQuery)
     connection.query(selectAllQuery, function(err, res) {
+        console.log("your in connection********")
+        console.log(res)
         if (err) {
             throw err;
         }
@@ -23,7 +52,7 @@ insertOne: function(table, cols, vals, cb) {
     insertOneQuery += cols.toString();
     insertOneQuery += ") "
     insertOneQuery += " VALUES (";
-    insertOneQuery += printQuestionMarks(vals.length);
+    insertOneQuery += questionToArr(vals.length);
     insertOneQuery += ") ";
 
     console.log(insertOneQuery);
@@ -40,7 +69,7 @@ updateOne: function(table, objColVals, condition, cb) {
     var updateOneQuery = "UPDATE " + table;
 
     updateOneQuery += " SET ";
-    updateOneQuery +=  objToSql(objColVals);
+    updateOneQuery +=  objSql(objColVals);
     updateOneQuery += " WHERE";
     updateOneQuery += condition;
 
