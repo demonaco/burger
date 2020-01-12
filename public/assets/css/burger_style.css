@@ -2,7 +2,7 @@ body {
     background-color: #E5A46E;
 }
 
-button {
+#submitButton {
    background-color: #0A5B54;
    left: 50%;
    margin-left: 122px;
