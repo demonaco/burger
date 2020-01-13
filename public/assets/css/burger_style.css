@@ -5,7 +5,7 @@ body {
 #submitButton {
    background-color: #0A5B54;
    left: 50%;
-   margin-left: 122px;
+   margin-left: 118px;
  
 }
 
@@ -22,8 +22,7 @@ margin-left: 40%;
 }
 
 h2 {
-/* margin-right: 30% */
-margin-left: 100px;
+margin-left: 95px;
 
 }
 
@@ -33,3 +32,14 @@ input {
     width: 280px;
 }
 
+li {
+    padding: 5px;
+    margin: 5px;
+    background: #DB5A9A;
+}
+
+#container2 {
+    width: 350px;
+    margin-left: 40px;
+    margin-top: 40px;
+}

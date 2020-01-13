@@ -1,14 +1,27 @@
-<div id="container">
+<div id="container2">
+<ul>
+    {{#each burger}}
+    {{#unless devoured}}
+    {{> burgers/burger-block devour=true}}
+    {{/unless}}
+    {{/each}}
+</ul>
 
+</div>
+
+<div id="container">
+    
 <img src="/assets/img/burger.png">
 
-<h2>Out-n'-In</h2>
+<h2>Out-n'-In Burgers</h2>
+<form class="create-form">
+
 <div class="form-group">
-<input type="form" id="inputForm" for="answer" placeholder="What kind of burger are ya hankerin' for?"></input>
+<input type="text" id="inputForm" placeholder="What kind of burger are ya hankerin' for?"></input>
 </div>
 <br>
 <br>
 <br>
 <button type="button" class="btn btn-secondary" id="submitButton">Submit</button>
+</form>
 
-</div>

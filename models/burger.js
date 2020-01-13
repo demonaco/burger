@@ -11,6 +11,7 @@ all: function(cb) {
 create: function(cols, vals, cb) {
     orm.insertOne("burgers", cols, vals, function(res) {
         cb(res)
+        console.log("helloooooo")
     });
 },
 update: function(objColVals, condition, cb) {

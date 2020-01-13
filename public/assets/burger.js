@@ -1,7 +1,7 @@
 $(function) {
-    $("#submitButton").on("click", function () {
+    $(".change-devour").on("click", function () {
         var id = $(this).data("id");
-        var devourState = $(this).data("devourstate")
+        var devourState = $(this).data("newdevour")
 
         var devourStateChange = {
             devoured: devourState
@@ -19,7 +19,7 @@ $(function) {
         );
     });
 
-    $("#inputForm").on("submit", function (event) {
+    $("#create-form").on("submit", function (event) {
         event.preventDefault();
 
         var newBurger = {
@@ -28,7 +28,7 @@ $(function) {
         };
 
         //POST
-        $.ajax("/api/cats", {
+        $.ajax("/api/burgers", {
             type: "POST",
             data: newBurger
         }).then(
