@@ -1,12 +1,15 @@
 body {
     background-color: #E5A46E;
+    font-family: 'Rubik', sans-serif;
+
 }
 
 #submitButton {
    background-color: #0A5B54;
    left: 50%;
    margin-left: 118px;
- 
+   font-family: 'Rubik', sans-serif;
+
 }
 
 img {
@@ -22,7 +25,8 @@ margin-left: 40%;
 }
 
 h2 {
-margin-left: 95px;
+margin-left: 54px;
+
 
 }
 
@@ -42,4 +46,10 @@ li {
     width: 350px;
     margin-left: 40px;
     margin-top: 40px;
+}
+
+input {
+    font-family: 'Rubik', sans-serif;
+    text-align: center;
+
 }

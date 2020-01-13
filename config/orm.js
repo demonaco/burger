@@ -33,9 +33,8 @@ function objSql(ob) {
 var orm = {
 selectAll: function(Input, cb) {
     console.log("your in the orm ======")
-    
+    console.log(typeof(Input))
     var selectAllQuery = "SELECT * FROM " + Input + ";";
-    console.log(selectAllQuery)
     connection.query(selectAllQuery, function(err, res) {
         console.log("your in connection********")
         console.log(res)
@@ -46,6 +45,7 @@ selectAll: function(Input, cb) {
     });
 },
 insertOne: function(table, cols, vals, cb) {
+    console.log("Inside Insert")
     var insertOneQuery = "INSERT INTO " + table;
 
     insertOneQuery += " (";

@@ -9,9 +9,10 @@ all: function(cb) {
 },
 
 create: function(cols, vals, cb) {
+    console.log("inside create")
     orm.insertOne("burgers", cols, vals, function(res) {
         cb(res)
-        console.log("helloooooo")
+
     });
 },
 update: function(objColVals, condition, cb) {

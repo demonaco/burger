@@ -2,15 +2,15 @@ var express = require('express');
 
 var router = express.Router();
 
-var burgers = require("../models/burger")
+var burger = require("../models/burger")
 
 router.get("/", function(req, res) {
     console.log("YOU SHOULD BE HITTING")
-    burgers.all(function(data) {
+    burger.all(function(data) {
         console.log("BELOW IS DATA ==============")
         console.log(data)
         var hbsObject = {
-            burger: data
+            burgers: data
         };
         console.log("YOUR IN ROUTER GET")
         console.log(hbsObject);
@@ -29,10 +29,10 @@ router.post("/api/burgers", function (req, res) {
     });
 });
 
-router.put("api/burgers/:id", function(req, res){
+router.put("/api/burgers/:id", function(req, res) {
     var condition = "id = " + req.params.id;
     console.log("hello")
-console.log(condition)
+
     console.log("condition", condition);
    
     burger.update({
