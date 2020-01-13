@@ -38,6 +38,12 @@ The "Out-n'-In" burger app showcases the relationship between an Express server,
 7. After coding assignment used debugging methods such as "console.log()"
  
 # Screenshots
-[!Homepage]()
-[]()
-[]()
+
+## First glance of "Out-n'-In" burger application
+[!Homepage](https://github.com/demonaco/burger/blob/master/public/assets/img/Screen%20Shot%202020-01-12%20at%209.03.42%20PM.png)
+
+## Code to use Router to post burger information
+[!Using Router to post burger information](https://github.com/demonaco/burger/blob/master/public/assets/img/Screen%20Shot%202020-01-12%20at%209.23.17%20PM.png)
+
+## index.handlebars page - using "{{#each}} statment to loop inside list of burgers table
+[!"{{#each}}" statement to loop](https://github.com/demonaco/burger/blob/master/public/assets/img/Screen%20Shot%202020-01-12%20at%2010.25.23%20PM.png)
