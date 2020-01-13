@@ -36,6 +36,9 @@ The "Out-n'-In" burger app showcases the relationship between an Express server,
 6. Read through a beginner's guide to express-handlebars.
 
 7. After coding assignment used debugging methods such as "console.log()"
+
+## Sources:
+My tutor Ryan, TAs, beginner's guide to Handlebars (https://www.sitepoint.com/a-beginners-guide-to-handlebars/), class activities, particularly "cats-app", Color combo guide (https://www.shutterstock.com/blog/101-color-combinations-design-inspiration).
  
 # Screenshots
 
