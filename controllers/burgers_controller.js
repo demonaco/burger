@@ -5,21 +5,16 @@ var router = express.Router();
 var burger = require("../models/burger")
 
 router.get("/", function(req, res) {
-    console.log("YOU SHOULD BE HITTING")
     burger.all(function(data) {
-        console.log("BELOW IS DATA ==============")
-        console.log(data)
         var hbsObject = {
             burgers: data
         };
-        console.log("YOUR IN ROUTER GET")
         console.log(hbsObject);
         res.render("index", hbsObject);
     });
 });
 
 router.post("/api/burgers", function (req, res) {
-    console.log("inside post")
     burger.create([
         "burger_name", "devoured"
     ], [

@@ -1,6 +1,6 @@
 <div id="container2">
 <ul>
-    {{#each burger}}
+    {{#each burgers}}
     {{#unless devoured}}
     {{> burgers/burger-block devour=true}}
     {{/unless}}
@@ -22,6 +22,6 @@
 <br>
 <br>
 <br>
-<button type="button" class="btn btn-secondary" id="submitButton">Submit</button>
+<button type="button" id="submitButton" type="submit">Submit</button>
 </form>
 
