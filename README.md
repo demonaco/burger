@@ -17,7 +17,7 @@ The "Out-n'-In" burger app showcases the relationship between an Express server,
 
 4. Importance of recognizing the node module version numbers you are using when it comes to debugging. A particular version of node + NPM package may not work together.
 
-5. How to connect to a database other than MySQL at the local level.
+5. How to connect to a secondary database other than Mysql.
 
 6. The use of middleware parsing when posting and receiving data.
 
