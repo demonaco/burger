@@ -46,10 +46,15 @@ li {
     width: 350px;
     margin-left: 40px;
     margin-top: 40px;
+    background-color: black;
 }
 
 input {
     font-family: 'Rubik', sans-serif;
     text-align: center;
 
+}
+
+#partBody {
+margin-left: 1em;
 }

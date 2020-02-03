@@ -10,7 +10,8 @@ all: function(cb) {
 
 create: function(cols, vals, cb) {
     console.log("inside create")
-    orm.insertOne("burgers", cols, vals, function(res) {
+    orm.insertOne("burgers", cols, vals, function(err,res) {
+        console.log("YORU IN THE CREATE FUNCTION$$$$$$$")
         cb(res)
 
     });
