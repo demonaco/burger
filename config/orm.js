@@ -70,7 +70,7 @@ updateOne: function(table, objColVals, condition, cb) {
 
     updateOneQuery += " SET ";
     updateOneQuery +=  objSql(objColVals);
-    updateOneQuery += " WHERE";
+    updateOneQuery += " WHERE ";
     updateOneQuery += condition;
 
     console.log(updateOneQuery);
@@ -80,7 +80,18 @@ updateOne: function(table, objColVals, condition, cb) {
         }
         cb(res);
     })
-    
-}
+    },
+    delete: function(table, condition, cb) {
+        var queryString = "DELETE FROM " + table;
+        queryString += " WHERE ";
+        queryString += condition;
+
+        connection.query(queryString, function(err, result) {
+            if (err) {
+            throw err;
+            }
+            cb(result);
+        })
+    }
 };
 module.exports = orm;

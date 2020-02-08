@@ -36,10 +36,10 @@ input {
     width: 280px;
 }
 
-li {
+ul {
     padding: 5px;
-    margin: 5px;
-    background: #DB5A9A;
+    margin-right: 32em;
+    background: rgb(197, 168, 125);
 }
 
 #container2 {
@@ -55,6 +55,3 @@ input {
 
 }
 
-#partBody {
-margin-left: 1em;
-}

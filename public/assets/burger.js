@@ -31,4 +31,15 @@ $(function () {
             location.reload();
         });
     });
+    
+    $("#deleteButton").on("click", function(event){
+        event.preventDefault();
+        console.log("in delete function")
+        var id = $(this).data("id");
+
+        $.ajax({
+            type: "DELETE",
+            url: "/api/burgers/" + id
+        }).then(location.reload());
+    });
 });
