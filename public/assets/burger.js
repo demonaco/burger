@@ -1,7 +1,6 @@
 $(function () {
     $("#submitButton").on("click", function (event) {
         event.preventDefault();
-        alert("you hit create")
         var newBurger = {
             burger_name: $("#inputForm").val().trim(),
             devoured: 0
@@ -31,8 +30,8 @@ $(function () {
             location.reload();
         });
     });
-    
-    $("#deleteButton").on("click", function(event){
+
+    $("#deleteButton").on("click", function(event) {
         event.preventDefault();
         console.log("in delete function")
         var id = $(this).data("id");
@@ -40,6 +39,8 @@ $(function () {
         $.ajax({
             type: "DELETE",
             url: "/api/burgers/" + id
-        }).then(location.reload());
+        }).then(function(){
+            location.reload();
+        });
     });
 });

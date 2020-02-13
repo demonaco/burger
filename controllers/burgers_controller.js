@@ -5,7 +5,7 @@ var router = express.Router();
 var burger = require("../models/burger")
 
 router.get("/", function(req, res) {
-    //alert("hello from router.get")
+    
     burger.all(function(data) {
         var hbsObject = {
             burgers: data
@@ -16,7 +16,7 @@ router.get("/", function(req, res) {
 });
 
 router.post("/api/burgers", function (req, res) {
-    console.log("hello1")
+   
     burger.create([
         "burger_name", "devoured"
     ], [
@@ -28,8 +28,6 @@ router.post("/api/burgers", function (req, res) {
 });
 
 router.put("/api/burgers/:id", function(req, res) {
-   
-   console.log("hit!")
    
     var condition = "id = " + req.params.id;
     console.log("hello INSIDE OF PUT")
