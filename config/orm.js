@@ -44,6 +44,8 @@ selectAll: function(Input, cb) {
     });
 },
 insertOne: function(table, cols, vals, cb) {
+    // console.log("INSIDE ORM")
+    // console.log()
     var insertOneQuery = "INSERT INTO " + table;
 
     insertOneQuery += " (";

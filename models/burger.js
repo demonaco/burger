@@ -8,10 +8,13 @@ all: function(cb) {
 },
 
 create: function(cols, vals, cb) {
+    
     orm.insertOne("burgers", cols, vals, function(err,res) {
         console.log("YORU IN THE CREATE FUNCTION$$$$$$$")
+        console.log("-------------++++++")
+    console.log(res)
+    console.log("-------------++++++")
         cb(res)
-
     });
 },
 updateOne: function(objColVals, condition, cb) {
